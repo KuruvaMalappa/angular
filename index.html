@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CoMakeIT</title>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no"/>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
+    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto:400,500,700,400italic'>
+    <link rel="stylesheet" href="assets/css/vendor/angular-material.min.css"/>
+    <link rel="stylesheet" href="assets/css/vendor/angular-material-icons.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/vendor/palette.css">
+    <link rel="stylesheet" href="assets/app.css"/>
+
+    <style type="text/css">
+        [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+            display: none !important;
+        }
+    </style>
+
+</head>
+<body ng-app="companyApp" layout="column" ng-cloak>
+    <div ui-view="topmenu"></div>
+    <div ui-view></div>
+
+
+<script src="assets/js/vendor/angular.min.js"></script>
+<script src="assets/js/vendor/angular-animate.min.js"></script>
+<script src="assets/js/vendor/angular-aria.min.js"></script>
+<script src="assets/js/vendor/angular-messages.min.js"></script>
+<script src="assets/js/vendor/angular-material.min.js"></script>
+
+
+<script type="text/javascript" src="assets/js/vendor/angular-material-icons.min.js"></script>
+<script src="assets/js/vendor/angular-material.min.js"></script>
+<script src="assets/js/vendor/angular-ui-router.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+
+<!-- local Storage  -->
+<script src="assets/js/vendor/angular-local-storage.min.js"></script>
+<!-- local Storage end here -->
+<script src="src/app.js"></script>
+
+<!-- Home Page Related files Start here -->
+<script src="src/company/company.js"></script>
+<script src="src/company/companyController.js"></script>
+<script src="src/company/companyService.js"></script>
+<!-- company Page Related files End here -->
+
+<!-- Side Menu Common files Start here -->
+
+<script src="src/common/sidemenu/Sidenav.js"></script>
+<script src="src/common/sidemenu/SidenavController.js"></script>
+<script src="src/common/sidemenu/SidenavService.js"></script>
+<!-- Side Menu Common files End here -->
+
+</body>
+</html>

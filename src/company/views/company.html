@@ -1,0 +1,124 @@
+
+<md-toolbar  class="app-toolbar-small md-hue-5" style="position: absolute;z-index: 1;">
+    <div layout="row">
+
+    </div>
+</md-toolbar>
+
+<section layout-gt-sm="row" class="container" flex >
+
+    <div flex="20" flex-xs="100" flex-sm="100" layout-xs="row" layout-sm="row" flex-offset-gt-sm="5" ui-view="sidenav" style="margin-top: 30px;"></div>
+    <!--Main Content here-->
+    <div flex flex-xs="100" flex-sm="100"  layout-xs="row" layout-sm="row">
+        <md-content flex layout-fill >
+            <md-card class="md-whiteframe-z1" style="margin-top: 30px;">
+                <md-toolbar class="site-content-toolbar-with-radius">
+                    <div layout="row">
+                        <div  flex="50" layout-align="start center">
+                            <h2 class="md-headline" style="padding-left:20px;">
+                                <md-icon md-svg-src="i-apartments1"></md-icon>
+                                Company Information
+                            </h2>
+                        </div>
+                    </div>
+                </md-toolbar>
+                <md-divider></md-divider>
+                <md-toolbar class="md-warn _md _md-toolbar-transitions" ng-if="company.companyObj.contactErrMessages.length>0">
+                    <div class="md-toolbar-tools" ng-repeat="errorMessage in company.companyObj.contactErrMessages">
+                        <h2 class="md-flex">{{errorMessage.type}} : {{ errorMessage.text }}</h2>
+                    </div>
+                </md-toolbar>
+                <md-divider ng-if="company.companyObj.contactErrMessages.length>0"></md-divider>
+                <md-card-content dw-loading="addcontactLoader">
+                    <!--<md-progress-circular class="md-warn md-hue-3" md-diameter="70"></md-progress-circular>-->
+                    <div layout="row">
+                        <div flex>
+                            <form name="companyForm" id="addCompanyDiv">
+                                <div layout="row">
+                                    <div flex="">
+                                        <md-input-container class="md-icon-float md-block">
+                                            <!-- Use floating label instead of placeholder -->
+                                            <label>Domain Name</label>
+                                            <md-icon md-svg-src="i-internet" class="name"></md-icon>
+                                            <input name="domainName" ng-model="company.companyObj.domainName" type="text" ng-required="true">
+                                            <div  ng-messages="companyForm.domainName.$error">
+                                                <div ng-message="required">Domain Name is required.</div>
+                                            </div>
+                                        </md-input-container>
+                                    </div>
+                                </div>
+                                <div layout="row">
+                                    <div flex>
+                                        <md-input-container class="md-icon-float md-block">
+                                            <!-- Use floating label instead of placeholder -->
+                                            <label>Company Name</label>
+                                            <md-icon md-svg-src="i-apartments2" class="name"></md-icon>
+                                            <input name="companyName"  type="text" ng-model="company.companyObj.companyName"  ng-required="true">
+                                            <div ng-messages="companyForm.companyName.$error">
+                                                <div ng-message="required">Comapany Name is required.</div>
+                                            </div>
+                                        </md-input-container>
+                                    </div>
+
+                                </div>
+
+                                <div layout="row">
+
+                                    <div flex>
+                                        <md-input-container class="md-icon-float md-block">
+                                            <!-- Use floating label instead of placeholder -->
+                                            <label>Sub Name</label>
+                                            <md-icon md-svg-src="i-user" class="name"></md-icon>
+                                            <input name="subName"
+                                                   type="text"
+                                                   ng-model="company.companyObj.subName"
+                                                   ng-required="true">
+                                            <div ng-messages="companyForm.subName.$error">
+                                                <div ng-message="required">Sub Name is required.</div>
+                                            </div>
+
+                                        </md-input-container>
+                                    </div>
+
+                                </div>
+
+                                <div layout="row">
+                                    <div flex>
+                                        <md-input-container class="md-icon-float md-block">
+                                            <!-- Use floating label instead of placeholder -->
+                                            <label>Present Address</label>
+                                            <md-icon md-svg-src="i-placeholder" class="name"></md-icon>
+                                            <input name="presentaddress" type="text" ng-model="company.companyObj.presentaddress"  ng-required="true">
+                                            <div  ng-messages="companyForm.presentaddress.$error">
+                                                <div ng-message="required">Present Address is required.</div>
+                                            </div>
+                                        </md-input-container>
+                                    </div>
+                                </div>
+                                <div>
+                                    <md-input-container class="normalize-input-space md-block">
+                                        <label>Permanent Address</label>
+                                        <md-icon md-svg-src="i-placeholder"></md-icon>
+                                        <input name="presentaddress" ng-model="company.companyObj.permanentaddress" type="text">
+                                    </md-input-container>
+                                </div>
+                            </form>
+                        </div>
+
+                    </div>
+                    <md-card-actions>
+                        <div layout="row" layout-align="center center ">
+                            <md-button class="md-primary md-raised md-hue-2" ng-click="company.addCompanyReset();">Reset</md-button>
+                            <md-button class="md-accent md-raised " ng-click="company.addNewCompany();" ng-disabled="companyForm.$invalid">Add Company</md-button>
+                        </div>
+                    </md-card-actions>
+                </md-card-content>
+            </md-card>
+        </md-content>
+    </div>
+
+
+</section>
+
+
+

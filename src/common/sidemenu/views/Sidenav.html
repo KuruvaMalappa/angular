@@ -1,0 +1,48 @@
+<div layout-gt-md="verticle" flex-xs="100" flex-sm="100" flex-md="100" layout-md="row" layout-xs="row" layout-sm="row" layout-fill class="sidenav" flex>
+    <md-sidenav layout-gt-sm="column"  class="md-whiteframe-z2 card-bottom-radius"
+                 md-is-locked-open="true">
+
+        <img ng-src="assets/companylogo.png" class="md-card-image"
+             style="min-height: 200px;max-height: 200px;" alt="Washed Out"/>
+        <div class="image-align">
+            <span class="select-wrapper">
+                <input type="file" name="image_src" id="image_src" />
+             </span>
+        </div>
+        <md-list layout-gt-sm="column" class="content-wrapper">
+            <md-item flex>
+                <md-button style="width:100%" ui-sref="company" ng-class="{'selected':sidenav.routePath=='company'}">
+                    <md-item-content layout="row">
+                        <div class="inset">
+                            <md-icon md-svg-src="i-apartments1"></md-icon>
+                        </div>
+                        <div  class="inset"> Company Information </div>
+                    </md-item-content>
+                </md-button>
+            </md-item>
+            <md-item flex>
+                <md-button style="width:100%" ui-sref="settings" ng-class="{'selected':sidenav.routePath=='settings'}">
+                    <md-item-content layout="row">
+                        <div class="inset">
+                            <md-icon md-svg-src="i-settings"></md-icon>
+                        </div>
+                        <div   class="inset">Company Settings</div>
+                    </md-item-content>
+                </md-button>
+            </md-item>
+
+            <md-item flex>
+                <md-button style="width:100%" ui-sref="users" ng-class="{'selected':sidenav.routePath=='users'}">
+                    <md-item-content layout="row">
+                        <div class="inset">
+                            <md-icon md-svg-src="assets/icons/candidates.svg"></md-icon>
+                        </div>
+                        <div   class="inset ">Company Users</div>
+                    </md-item-content>
+                </md-button>
+            </md-item>
+        </md-list>
+    </md-sidenav>
+
+
+</div>

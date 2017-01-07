@@ -1,0 +1,54 @@
+
+/*IE 6, 7 and 8*/
+
+@media \0screen\,screen\9 {
+    .flex {
+        flex: 1 0 auto;
+    }
+}
+/*IE 9 and 10*/
+@media screen and (min-width:0\0) {
+    .flex {
+        flex: 1 0 auto;
+    }
+    .md-sidenav {
+        max-width: 270px;
+    }
+    .md-input-container {
+        margin: 9px 0;
+    }
+    .site-content-toolbar.layout-fill {
+        min-height: auto;
+        height: auto;
+    }
+}
+
+/*IE 10 and above*/
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    .flex {
+        flex: 1 0 auto;
+    }
+    .md-input-container {
+        margin: 9px 0;
+    }
+    .md-sidenav {
+        max-width: 270px;
+    }
+    .site-content-toolbar.layout-fill {
+        min-height: auto;
+        height: auto;
+    }
+}
+
+/*IE 11 (and above..)*/
+_:-ms-fullscreen, :root .flex {
+    flex: 1 0 auto;
+}
+
+_:-ms-fullscreen, :root .md-input-container {
+    margin: 4px 0;
+}
+
+_:-ms-fullscreen, :root .md-sidenav {
+    max-width: 270px;
+}
